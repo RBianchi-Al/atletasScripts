@@ -1,0 +1,66 @@
+#codigo {
+	width: 10%;
+} 
+
+#a-i {
+	width: 5%;
+} 
+
+#nome {
+	width: 30%;
+} 
+
+#apelido {
+	width: 15%;
+} 
+
+#sexo {
+	width: 5%;
+} 
+
+#fone {
+	width: 10%;
+} 
+
+#cpf {
+	width: 20%;
+} 
+
+#novo {
+	width: 10%;
+} 
+
+#editar {
+	width: 10%;
+	padding: 1px;
+} 
+
+#ativar {
+	width: 10%;
+	padding: 1px;    
+} 
+#filtros{
+	margin: 15px;
+}
+
+#tabela{
+	padding: 0;
+}
+*{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}	
+#corpo_rel{
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.363);
+	margin: 4%;
+	padding: 1.5%;
+}
+body{
+	background: #403B4A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}

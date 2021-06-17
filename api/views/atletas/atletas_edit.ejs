@@ -1,0 +1,108 @@
+<%- include("../atletas/atletas_head.ejs") %>
+
+  <%- include("../atletas/atletas_menu_horizontal.ejs") %>
+
+
+    <!--
+  página de edição dos atletas
+  
+-->
+
+    <div id="caminho">
+
+    </div>
+    <form action="/atletas/gravar" method="post">
+
+
+      <div id="corpo_edit">
+        <div class="form-group row">
+          <div class="col-md-1 offset-md-1">
+            <label>Código</label>
+            <input type="text" class="form-control" value="<%=obj_atletas[0].codigo %>" name="codigo" readonly>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group row">
+        <div class="col-md-1 offset-md-1">
+          <label>A/I</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].aut_ativoinativo %>" name="aut_ativoinativo"
+            maxlength="1">
+        </div>
+      </div>
+
+
+
+      <div class="form-group row">
+        <div class="col-md-4 offset-md-1">
+          <label>Nome do Autor</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].atl_nome %>" name="atl_nome" maxlength="">
+        </div>
+      </div>
+
+
+
+      <div class="form-group row">
+        <div class="col-md-2 offset-md-1">
+          <label>Apelido do Autor</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].atl_apelido %>" name="atl_apelido"
+            maxlength="10">
+        </div>
+      </div>
+
+
+
+
+      <div class="form-group row">
+        <div class="col-md-1 offset-md-1">
+          <label>Sexo</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].atl_sexo %>" name="atl_sexo" maxlength="1">
+        </div>
+      </div>
+
+
+
+
+      
+      <div class="form-group row">
+        <div class="col-md-4 offset-md-1">
+          <label>CPF</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].atl_cpf %>" name="atl_cpf"
+            maxlength="40">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-2 offset-md-1">
+          <label>Telefone</label>
+          <input type="text" class="form-control" value="<%=obj_atletas[0].aut_telefone %>" name="aut_telefone"
+            maxlength="15">
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div id="botoes_confirmar">
+        <div class="form-group row">
+          <div class="col-md-2 offset-md-1" id="btn_confirmar">
+            <button type="submit" class="btn btn-primary btn-block"> Confirmar </button>
+          </div>
+          <div class="col-md-2 offset-md-1" id="btn_novo">
+            <a class="btn btn-success btn-block" href="/atletas/novo"> Incluir </a>
+          </div>
+          <div class="col-md-2 offset-md-1" id="btn_cancelar">
+            <a class="btn btn-secondary btn-block" href="/atletas/listar"> Cancelar </a>
+          </div>
+
+        </div>
+      </div>
+    </form>
+
+    <%- include("../inicio/footer.ejs") %>

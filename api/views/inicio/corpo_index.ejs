@@ -1,0 +1,91 @@
+<%- include("../inicio/head.ejs") %>
+
+<%- include("../inicio/header.ejs") %>
+
+<%- include("../inicio/menu_horizontal_index.ejs") %>
+        
+<!-- PRIMEIRA LINHA DE CARDS -->
+<section>
+  <div id="dados">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Volei</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick="load_livros()"> <img src="../imagens/volei.jpg" alt="Livros"
+              width="80" height="80"/></button>
+            </figure>
+           </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Atletismo</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick="load_editoras()"> <img src="../imagens/atletismo.jpg" alt=Editoras"
+              width="80" height="80"/></button>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Luta Boxe</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick="load_autores()"> <img src="../imagens/box.jpg" alt="Autores"
+              width="80" height="80"/></button>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  SEGUNDA LINHA DE CARDS -->
+
+    <div class="row" style="margin-top: 5px;">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Salto com Vara</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick="load_usuarios()"> <img src="../imagens/salto.jpg" alt="Usuários"
+              width="80" height="80"/></button>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Cadastro de Configurações</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick="load_configuracoes()"> <img src="./imagens/configurando.jpeg" alt="Configurações"
+              width="80" height="80"/></button>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Outros</h5>
+            <figure>
+              <button id="btn_auto" class="closing" onClick=""> <img src="./imagens/livre.jpg" alt="Livre"
+              width="80" height="80"/></button>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <%- include("../inicio/footer.ejs") %>

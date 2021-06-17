@@ -1,0 +1,47 @@
+<!-- Injetando JAVASCRIPT NA PAGINA DE VISUALIZACAO-->
+
+<%- include("../modalidades/modalidades_head.ejs") %>
+
+  <%- include("../modalidades/modalidades_menu_horizontal.ejs") %>
+
+    <!-- Corpo da Pagina-->
+    
+    <section id="corpo_rel">
+        <legend id="title"> Registro das Modalidades </legend>
+        <table id="tabela" class="table-striped">
+          <thead id="cabecalho_rel">
+            <tr>
+              <th id="codigo"> Código </th>
+              <th id="a-i"> A/I </th>
+              <th id="descricao"> Descrição </th>
+              <th id="tipo"> Tipo </th>
+              <th id="federacao"> Federação </th>
+              <th id="coletivo"> Coletivo </th>
+              <th id="atleta"> Atleta </th>
+              <th></th>
+              <th id="novo"> <a class="btn btn-primary btn-block" href="modalidades/novo">Nova Modalidade</a></th>
+            </tr>
+          </thead>
+
+          <tbody id="corpo_rel">
+            <% for(i=0; i<obj_modalidades.length; i++) {%>
+              <tr>
+                <td id="mod_codigo"><%= obj_modalidades[i].mod_codigo %></td>
+                <td id="a-i">
+                  <%= obj_modalidades[i].aut_ativoinativo %>
+                </td>
+                <td id="descricao"><%= obj_modalidades[i].mod_descricao %></td>
+                <td id="tipo"><%= obj_modalidades[i].mod_tipo %></td>
+                <td id="federacao"><%= obj_modalidades[i].mod_federacao %></td>
+                <td id="coletivo"><%= obj_modalidades[i].mod_coletivo %></td>
+                <td id="codigo"><%= obj_modalidades[i].codigo %></td>
+                
+                <td id="editar"> <a class="btn btn-secondary btn-block" href=<%="/modalidades/editar/" + obj_modalidades
+                  [i].codigo %>> Editar </a></td>
+                <td id="inativar"> <a class="btn btn-danger btn-block" href=<%="/modalidades/ativoInativo/" + obj_modalidades
+                   [i].codigo %>> Inativar </a></td>
+             </tr>
+            <% } %>
+          </tbody>
+        </table>
+    </section>

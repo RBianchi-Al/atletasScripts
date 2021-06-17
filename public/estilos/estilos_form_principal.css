@@ -1,0 +1,47 @@
+#cab_esquerda,  #cab_centro, #cab_direita {
+
+    height: 115px;
+    font-size: 15px;
+    background-color: rgba(87, 87, 87, 0.151);
+    padding: 0px;
+    margin: 0px;
+}
+
+#logoFatec, #logoCPS {
+    max-width: 150px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin: 5px;
+}
+
+#corpo_btn {
+
+    margin: 5px;
+    height: 10%;
+}
+
+#btn_livros, #btn_editoras, #btn_autores, #btn_usuarios, #btn_configuracoes {
+    margin: 10px 1px 1px 30px;
+}
+
+#cards {
+    margin: 5%;
+    height: 56%;
+    margin-block-end: 5px;
+}
+
+#borda_cards {
+    margin: 1px;
+}
+
+header {
+    text-align: center;
+    margin: 1%;
+	height: 17%;
+}
+body{
+   background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

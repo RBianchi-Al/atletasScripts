@@ -1,0 +1,84 @@
+#corpo_rel {
+	height: 77%;
+	border: 0px solid black;
+	padding: 10px;
+	margin: 5px;
+}
+
+legend {
+	text-align: center;
+	border: 0px solid black;
+	padding: 10px;
+
+}
+
+table, th, td {
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+}
+
+#tabela {
+	font-family: Arial, Helvetica, sans-serif;    
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+	padding: 8px;
+}
+
+#tabela tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabela tr:hover {background-color: #ddd;}
+
+#tabela th {
+padding-top: 3px;
+padding-bottom: 3px;
+text-align: left;
+background-color: #a7eff1;
+color: black;
+}
+
+#thead {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: rgb(236, 230, 228);
+}
+
+#btn_confirmar {
+	width:90;
+	height:10;
+	size: 70;
+}
+
+#edit_cod_ini, #edit_cod_fim {
+	width: 20%;
+}
+
+#edit_atv_ini, #edit_atv_fim, #edit_sex_ini, #edit_sex_fim {
+	width: 10%;
+	text-align: center;
+}
+
+#filtros {
+	height: 6%;
+    background-color: rgba(241, 241, 241, 0.568);
+	padding: 5px;
+	padding-top: 2%;
+	margin: 0.5%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16;
+	
+}
+
+#btn_executar {
+	font-weight: 200;
+	font-size: 12;
+}
+*{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}

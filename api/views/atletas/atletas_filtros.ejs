@@ -1,0 +1,33 @@
+<!--
+  filtros
+-->
+<form id="filtros" action="/atletas/filtrar" method="post">
+
+  <div class="form-group row">
+    <div class="col-md-3" id="filtro_codigo">
+      <label>Código.:</label>
+      <input type="text" name="cod_ini" value="0" id="edit_cod_ini" /> A <input type="text" name="cod_fim" value="99999"
+        id="edit_cod_fim" />
+    </div>
+
+    <div class="col-md-3" id="filtro_ai">
+      <label>Ativo/Inativo...:</label>
+      <input type="text" name="atv_ini" value="A" id="edit_atv_ini" /> A <input type="text" name="atv_fim" value="Z"
+        id="edit_atv_fim" />
+    </div>
+
+    <div class="col-md-3" id="filtro_sexo">
+      <label>Sexo.:</label>
+      <input type="text" name="sex_ini" value="F" id="edit_sex_ini" /> A <input type="text" name="sex_fim" value="Z"
+        id="edit_sex_fim" />
+    </div>
+
+    <div class="col-md-3" id="filtro_executar">
+      <button type="submit" class="btn btn-success btn-block "> Executar </button>
+    </div>
+  </div>
+
+</form>
+<!--
+  final filtros
+-->

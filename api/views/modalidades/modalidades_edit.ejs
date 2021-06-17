@@ -1,0 +1,88 @@
+<%- include("../modalidades/modalidades_head.ejs") %>
+  <%- include("../atletas/atletas_menu_horizontal.ejs") %>
+
+    <div id="caminho">
+      <p>
+        <%= caminho %>
+      </p>
+    </div>
+
+    <form action="/modalidades/gravar" method="post">
+
+      <div id="corpo_edit">
+        <br>
+        <div class="form-row">
+          <div class="col-md-1 offset-md-1">
+            <label> Codigo </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].mod_codigo %>" name="mod_codigo" readonly>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-1 offset-md-1">
+            <label> A/I> </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].aut_ativoinativo %>"
+              name="aut_ativoinativo" maxlenght="1">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 offset-md-1">
+            <label> Descrição </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].mod_descricao %>" name="mod_descricao"
+              maxlenght="50">
+          </div>
+        </div>
+
+        <br>
+        <div class="form-row">
+          <div class="col-md-2 offset-md-1">
+            <label> Tipo </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].mod_tipo %>" name="mod_tipo"
+              maxlenght="10">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-1 offset-md-1">
+            <label> Federação </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].mod_federacao %>" name="mod_federacao"
+              maxlenght="20">
+          </div>
+        </div>
+
+        <br>
+        <div class="form-row">
+          <div class="col-md-2 offset-md-1">
+            <label> Coletivo </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].mod_coletivo %>" name="mod_coletivo" maxlenght="4">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 offset-md-1">
+            <label> Atleta </label>
+            <input type="text" class="form-control" value="<%= obj_modalidades[0].codigo %>" name="codigo">
+          </div>
+        </div>
+
+      </div>
+
+      <div id="botoes_confirmar">
+        <div class="form-group row">
+          <div class="col-md-3" id="btn_confirmar">
+            <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+          </div>
+          <div class="col-md-3" id="btn_novo">
+            <a class="btn btn-success btn-block" href="/modalidades/novo">Incluir</a>
+          </div>
+          <div class="col-md-3" id="btn_cancelar">
+            <a class="btn btn-secondary btn-block" href="/modalidades/listar">Cancelar</a>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+
+    <%- include("../inicio/footer.ejs") %>

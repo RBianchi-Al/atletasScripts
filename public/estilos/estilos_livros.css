@@ -1,0 +1,64 @@
+body{
+    background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#codigo {
+    width: 5%;
+} 
+
+#a-i {
+    width: 5%;
+} 
+
+#titulo {
+    width: 25%;
+} 
+
+#edicao {
+    width: 10%;
+} 
+
+#isbn {
+    width: 12%;
+} 
+
+#ano {
+    width: 4%;
+} 
+
+#autor {
+    width: 5%;
+} 
+
+#nomeautor {
+    width: 10%;
+} 
+
+#editora {
+    width: 5%;
+} 
+
+#nomeeditora {
+    width: 25%;
+} 
+
+#novo {
+    width: 10%;
+} 
+
+#editar {
+    width: 10%;
+    padding: 1px;
+} 
+
+#ativar {
+    width: 10%;
+    padding: 1px;    
+} 
+*{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}

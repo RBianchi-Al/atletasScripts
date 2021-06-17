@@ -1,0 +1,59 @@
+
+#codigo {
+	width: 5%;
+} 
+
+#a-i {
+	width: 4%;
+} 
+
+#nome {
+	width: 25%;
+} 
+
+#cidade {
+	width: 12%;
+} 
+
+#cep {
+	width: 10%;
+} 
+
+#estado {
+	width: 6%;
+} 
+
+#email {
+	width: 20%;
+} 
+
+#fone {
+	width: 10%;
+} 
+
+#editar {
+	width: 10%;
+	padding: 1px;
+} 
+
+#ativar {
+	width: 10%;
+	padding: 1px;    
+} 
+body{
+	background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+footer {
+	height: 4%;
+	text-align: center;
+	margin: 0.5%;
+	color: blanchedalmond;
+	background-color: rgb(73, 73, 73);
+}
+*{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}

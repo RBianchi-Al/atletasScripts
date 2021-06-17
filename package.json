@@ -1,0 +1,31 @@
+{
+  "name": "rotas",
+  "version": "1.0.0",
+  "description": "rotas com node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "consign": "^0.1.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RBianchi-Al/projetoLivrosParte2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RBianchi-Al/projetoLivrosParte2/issues"
+  },
+  "homepage": "https://github.com/RBianchi-Al/projetoLivrosParte2#readme",
+  "keywords": []
+}
