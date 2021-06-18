@@ -101,7 +101,7 @@ function atletasFiltrar(req, res) {
 		atv_i, atv_f,
 		sex_i, sex_f,
 		function (err, resultado) {
-			console.log("Retorno da Consulta:\n " + resultado);
+			console.log("Retorno da Consulta:\n "+resultado);
 			if (err) {
 				throw err
 			} else {

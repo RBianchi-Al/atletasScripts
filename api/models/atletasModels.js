@@ -23,6 +23,7 @@ function editarAtletas(dados, callback) {
     "', atl_sexo = '" + dados.atl_sexo +
     "', atl_cpf = '" + dados.atl_cpf +
     "', aut_telefone = '" + dados.aut_telefone +
+    
     "' where codigo = '" + dados.codigo + "'";
 
   conexao.query(m_sql, callback);

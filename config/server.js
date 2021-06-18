@@ -1,8 +1,14 @@
 const express = require('express');
 const consign = require('consign');
 const path = require('path');
+const body = require('body-parser')
 
 app = express();
+
+app.use(body.urlencoded({extended: true}));
+app.use(body.json())
+
+
 
 //configurar diretório das views
 app.set('views', path.join(__dirname, '../api/views'));

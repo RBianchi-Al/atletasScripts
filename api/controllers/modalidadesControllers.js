@@ -6,7 +6,7 @@ module.exports = {
 	modalidadesGravar,
 	modalidadesNovo,
 	atletasActiveAi,
-	// atletasFiltrar,
+	atletasFiltrar,
 	atletasActiveAi,
 }
 
@@ -77,6 +77,12 @@ function modalidadesGravar(req, res) {
 function modalidadesNovo(req, res) {
 	var dados = [
 		{
+			mod_codigo: "",
+			mod_descricao: "",
+			mod_tipo: "",
+			mod_federacao: "",
+			mod_coletivo: "",
+			codigo: "",
 		}
 	]
 	res.render('modalidades/modalidades_edit.ejs', {
@@ -89,7 +95,7 @@ function modalidadesNovo(req, res) {
 // não deletar vendas para manter um histórico OU deixar o ativo e inativo em um registro
 
 function atletasActiveAi() { }
-/*
+
 
 function atletasFiltrar(req, res) {
 
@@ -115,9 +121,9 @@ function atletasFiltrar(req, res) {
 					if (err) {
 							throw err
 					} else {
-							res.render('autores/autores_corpo.ejs', {
+							res.render('atletas/atletas_corpo.ejs', {
 									title: 'NodeJs-Livros',
-									obj_autores: resultado,
+									obj_atletas: resultado,
 									caminho: req.originalUrl
 							});
 					}
@@ -125,11 +131,11 @@ function atletasFiltrar(req, res) {
 	)
 }
 
-function autoresActiveAi(req, res) {
+function atletasActiveAi(req, res) {
 	var id = req.params.codigo;
 	var p_ativo = "";
-	console.log("Código Autor a Ativa/Inativar: ", id);
-	autoresController.getByIdAutores(id, function (err, result) {
+	console.log("Código Atleta a Ativa/Inativar: ", id);
+	atletasController.getByIdAtletas(id, function (err, result) {
 			console.log("A/I: ", result[0].aut_ativoinativo);
 			p_ativo = result[0].aut_ativoinativo;
 
@@ -144,18 +150,17 @@ function autoresActiveAi(req, res) {
 			}
 			console.log("I/A: ", p_ativo);
 
-			autoresController.inativarAutor(id, p_ativo, function (err, result) {
+			atletasController.inativarAtletas(id, p_ativo, function (err, result) {
 					if (err) {
 							console.log("Erro Verifique!!!");
 							throw err;
 					}
 					console.log("Passou!");
 
-					res.redirect('/autores/listar');
+					res.redirect('/atletas/listar');
 
 			});
 	})
 
 
 }
-*/
