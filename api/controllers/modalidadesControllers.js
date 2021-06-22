@@ -8,6 +8,7 @@ module.exports = {
 	atletasActiveAi,
 	atletasFiltrar,
 	atletasActiveAi,
+	modalidadesDeletar
 }
 
 // listando os modalidades
@@ -163,4 +164,22 @@ function atletasActiveAi(req, res) {
 	})
 
 
+}
+
+
+function modalidadesDeletar(req, res) {
+	const id = req.params.mod_codigo;
+
+	console.log("Parametro Esperado: " + id);
+
+	modalidadesController.deletarModalidades(id, function (err, resultado) {
+		console.log("Retorno Modalidades { MODEL }\n", resultado);
+		if (err) {
+			throw err;
+		} else {
+
+			res.redirect('/modalidades/listar');
+
+		}
+	})
 }

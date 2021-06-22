@@ -6,11 +6,12 @@ module.exports = {
   editarModalidades,
   inserirModalidades,
   inativarModalidades,
-  filtrarModalidades
+  filtrarModalidades,
+  deletarModalidades
 }
 
 function getAllModalidades(callback) {
-  conexao.query('select A.* from modalidades A ', callback);
+  conexao.query('select * from atletas inner join modalidades where atletas.codigo = modalidades.codigo', callback);
 }
 
 
@@ -19,13 +20,11 @@ function getByIdModalidades(id, callback) {
 }
 
 function editarModalidades(dados, callback) {
-  const m_sql = "update modalidades set aut_ativoinativo = '" + dados.aut_ativoinativo +
-    "', mod_codigo = '" + dados.mod_codigo +
-    "', mod_descricao = '" + dados.mod_descricao +
+  const m_sql = "update modalidades set  mod_descricao = '" + dados.mod_descricao +
     "', mod_tipo = '" + dados.mod_tipo +
     "', mod_federacao = '" + dados.mod_federacao +
     "', mod_coletivo = '" + dados.mod_coletivo +
-    "', codigo = '" + dados.fk_codigo_idx +
+    "', codigo = '" + dados.codigo +
     "' where mod_codigo = '" + dados.codigo + "'";
 
   conexao.query(m_sql, callback);
@@ -38,12 +37,6 @@ function inserirModalidades(dados, callback) {
   conexao.query(m_sql, dados, callback)
 }
 
-function inserirAtletas(dados, callback) {
-  console.log("Inserindo Atletas { M O D E L}");
-  const m_sql = "insert into atletas set ? ";
-
-  conexao.query(m_sql, dados, callback)
-}
 
 function inativarModalidades(id, ativo, callback) {
   console.log("Atletas Ativando/Inativando ", id + " - " + ativo);
@@ -66,4 +59,8 @@ function filtrarModalidades(
 
   console.log(m_sql + "\n");
   conexao.query(m_sql, callback);
+}
+
+function deletarModalidades(id, callback){
+  conexao.query("delete * from modalidades where mod_codigo = " + id, callback);
 }

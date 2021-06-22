@@ -6,7 +6,7 @@ module.exports = {
   editarAtletas,
   inserirAtletas,
   filtrarAtletas,
-  inativarAtletas,
+  deletarAtletas
 }
 
 function getAllAtletas(callback) {
@@ -36,25 +36,20 @@ function inserirAtletas(dados, callback) {
   conexao.query(m_sql, dados, callback)
 }
 
-function inativarAtletas(id, ativo, callback) {
-  console.log("Atletas Ativando/Inativando ", id + " - " + ativo);
-  const msql = "UPDATE atletas SET aut_ativoinativo = '" + ativo + "' WHERE codigo = '" + id + "'";
-  conexao.query(msql, function (err, result) {
-    conexao.query(msql, callback);
-  });
-  console.log("Estou Ativando/Desativanto Atletas { M O D E L }");
-}
+
 
 function filtrarAtletas(
   pcod_i, pcod_f,
-  patv_i, patv_f,
   psex_i, psex_f, callback) {
 
   const m_sql = 'select * from atletas where ' +
     'codigo >= ' + pcod_i + ' && ' + 'codigo <= ' + pcod_f + ' && ' +
-    'aut_ativoinativo >= \'' + patv_i + '\'' + ' && ' + 'aut_ativoinativo <= \'' + patv_f + '\'' + ' && ' +
     'atl_sexo         >= \'' + psex_i + '\'' + ' && ' + 'atl_sexo         <= \'' + psex_f + '\'';
 
   console.log(m_sql + "\n");
   conexao.query(m_sql, callback);
+}
+
+function deletarAtletas(id, callback){
+    conexao.query("delete from atletas where codigo = " + id, callback);
 }

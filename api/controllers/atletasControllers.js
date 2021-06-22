@@ -6,19 +6,18 @@ module.exports = {
 	atletasGravar,
 	atletasNovo,
 	atletasFiltrar,
-	atletasActiveAi,
+	atletasDeletar
 }
 
+
 function atletasGetAll(req, res) {
-	console.log("Listar Atletas {MODEL}");
-	atletasController.getAllAtletas(function (err, resultado) {
+		atletasController.getAllAtletas(function (err, resultado) {
 		console.log(" Listar Atletas {M O D E L}", resultado);
 		if (err) {
 			throw err;
 		} else {
 			res.render('atletas/atletas_corpo.ejs', {
-				title: 'NodeJs-Livros',
-				nomealuno: 'Renata Alexandre Bianchi',
+				title: 'Listar Atletas',
 				obj_atletas: resultado
 			});
 		}
@@ -115,33 +114,21 @@ function atletasFiltrar(req, res) {
 	)
 }
 
-function atletasActiveAi(req, res) {
-	var id = req.params.codigo;
-	var p_ativo = "";
-	console.log("Código Atletas a Ativa/Inativar: ", id);
-	atletasController.getByIdAtletas(id, function (err, result) {
-		console.log("A/I: ", result[0].aut_ativoinativo);
-		p_ativo = result[0].aut_ativoinativo;
 
+
+function atletasDeletar(req, res) {
+	const id = req.params.codigo;
+
+	console.log("Parametro Esperado: " + id);
+
+	atletasController.deletarAtletas(id, function (err, resultado) {
+		console.log("Retorno Atletas { MODEL }\n", resultado);
 		if (err) {
 			throw err;
 		} else {
-			if (p_ativo == "A") {
-				p_ativo = "I"
-			} else {
-				p_ativo = "A";
-			}
-		}
-		console.log("I/A: ", p_ativo);
 
-		atletasController.inativarAtletas(id, p_ativo, function (err, result) {
-			if (err) {
-				console.log("Erro Verifique!!!");
-				throw err;
-			}
-			console.log("Passou!");
 			res.redirect('/atletas/listar');
-		});
+
+		}
 	})
 }
-

@@ -37,9 +37,9 @@
                 <td id="codigo"><%= obj_modalidades[i].codigo %></td>
                 
                 <td id="editar"> <a class="btn btn-secondary btn-block" href=<%="/modalidades/editar/" + obj_modalidades
-                  [i].codigo %>> Editar </a></td>
-                <td id="inativar"> <a class="btn btn-danger btn-block" href=<%="/modalidades/ativoInativo/" + obj_modalidades
-                   [i].codigo %>> Inativar </a></td>
+                  [i].mod_codigo %>> Editar </a></td>
+                <td id="inativar"> <a class="btn btn-danger btn-block" href=<%="/modalidades/excluir/" + obj_modalidades
+                   [i].mod_codigo %>> Excluir </a></td>
              </tr>
             <% } %>
           </tbody>

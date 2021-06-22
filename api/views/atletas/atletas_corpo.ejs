@@ -9,11 +9,10 @@
     
     <section id="corpo_rel">
         <legend id="title"> Registro de Atletas Cadastrados </legend>
-        <table id="tabela" class="table-striped">
+        <table id="tabela" class="table-striped" >
           <thead id="cabecalho_rel">
-            <tr>
+            <tr >
               <th id="codigo"> Código </th>
-              <th id="a-i"> A/I </th>
               <th id="nome"> Nome do Atleta </th>
               <th id="apelido"> Apelido </th>
               <th id="sexo"> Sexo </th>
@@ -28,19 +27,16 @@
             <% for(i=0; i<obj_atletas.length; i++) {%>
               <tr>
                 <td id="codigo"><%= obj_atletas[i].codigo %></td>
-                <td id="a-i">
-                  <%= obj_atletas[i].aut_ativoinativo %>
-                </td>
                 <td id="nome"><%= obj_atletas[i].atl_nome %></td>
                 <td id="apelido"><%= obj_atletas[i].atl_apelido %></td>
                 <td id="sexo"><%= obj_atletas[i].atl_sexo %></td>
                 <td id="cpf"><%= obj_atletas[i].atl_cpf %></td>
                 <td id="fone"><%= obj_atletas[i].aut_telefone %></td>
                 
-                <td id="editar"> <a class="btn btn-secondary btn-block" href=<%="/atletas/editar/" + obj_atletas
+                <td id="editar"> <a type="submit" class="btn btn-secondary btn-block" href=<%="/atletas/editar/" + obj_atletas
                   [i].codigo %>> Editar </a></td>
-                <td id="inativar"> <a class="btn btn-danger btn-block" href=<%="/atletas/ativoInativo/" + obj_atletas
-                   [i].codigo %>> Inativar </a></td>
+                <td id="inativar"> <a class="btn btn-danger btn-block" href=<%="/atletas/excluir/" + obj_atletas
+                   [i].codigo %>> Excluir </a></td>
              </tr>
             <% } %>
           </tbody>
